@@ -2,7 +2,7 @@ grafana:
   enabled: true
   initChownData:
     enabled: false
-  adminPassword: password
+  adminPassword: "<set-grafana-admin-password>"  # pragma: allowlist secret
   grafana.ini:
     server:
       domain: naavre-dev.minikube.test

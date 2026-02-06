@@ -1,4 +1,4 @@
-# Example values for Canary deployment with Argo Rollouts and Automated Analysis
+# Example values for Canary deployment with Argo Rollouts and Automated Analysis # pragma: allowlist secret
 # Usage: helm install my-release ./helm/fastapi-gitops-starter -f example-canary-with-analysis-values.yaml
 #
 # Prerequisites:
@@ -13,9 +13,9 @@ image:
 
 registry:
   createImagePullSecret: true
-  secretName: image-pull-secret
+  secretName: image-pull-secret  # pragma: allowlist secret
   server: ghcr.io
-  token: ""
+  token: "<set-ghcr-token>"  # pragma: allowlist secret
 
 # Enable Argo Rollouts with Canary strategy and automated analysis
 rollout:
