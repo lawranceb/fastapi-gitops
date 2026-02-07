@@ -5,19 +5,18 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/qcdis/fastapi-gitops-starter
+  repository: ghcr.io/lawranceb/fastapi-gitops-starter
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.4"
+  tag: "3.0.0"
 
 registry:
-  createImagePullSecret: true
-  secretName: image-pull-secret  # pragma: allowlist secret
-  server: ghcr.io
-  token: "<set-ghcr-token>"  # pragma: allowlist secret
+  createImagePullSecret: false
+  # secretName: image-pull-secret # pragma: allowlist secret
+  # server: ghcr.io
+  # token: "<set-ghcr-token>" # pragma: allowlist secret
 
-imagePullSecrets:
-  - name: image-pull-secret
+# imagePullSecrets:
+#   - name: image-pull-secret
 
 nameOverride: ""
 fullnameOverride: ""
